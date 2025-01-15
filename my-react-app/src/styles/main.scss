@@ -1,5 +1,6 @@
-@use "./components/index" as *;
+@use "./components/variables" as *;
+@use "./Pages/index" as *;
 @use "./components/header" as *;
+@use "./components/Banner" as *;
+@use "./components/card" as *;
 @use "./components/footer" as *;
-
-

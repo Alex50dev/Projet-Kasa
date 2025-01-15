@@ -1,0 +1,43 @@
+html, body {
+  height: 100%; /* Garantit que body prend toute la hauteur de l'écran */
+  margin: 0;    /* Supprime la marge par défaut */
+  padding: 0;   /* Supprime le padding par défaut */
+  display: block;  /* Supprime le display flex */
+  place-items: normal;
+}
+
+// Styles pour la page Home
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 0;
+  margin: 0;
+
+  .banner {
+    width: 100%;
+    height: 300px;
+    background: url('/assets/banner.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+    // Gère les marges pour les petits écrans
+    @media (max-width: 768px) {
+      padding: 10px;
+    }
+  }
+}
+

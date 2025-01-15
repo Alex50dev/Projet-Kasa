@@ -1,12 +1,26 @@
 import React from "react";
+import Banner from "../components/Banner";
+import Card from "../components/card";
+import properties from "../data/logements.json";
+import "../styles/Pages/_index.scss";
 
-const Home = () => {
+function Home() {
   return (
-    <main>
-      <h2>Bienvenue sur Kasa</h2>
-      <p>Découvrez nos logements disponibles.</p>
-    </main>
+    <div className="home">
+      <div className="banner">
+        <h1>Chez vous, partout et ailleurs</h1>
+      </div>
+      <div className="cards-container">
+        {properties.map((property) => (
+          <Card
+            key={property.id}
+            image={property.cover}
+            title={property.title}
+          />
+        ))}
+      </div>
+    </div>
   );
-};
+}
 
 export default Home;
