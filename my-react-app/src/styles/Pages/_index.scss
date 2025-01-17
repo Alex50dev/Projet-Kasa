@@ -1,3 +1,5 @@
+@import "../components/variables";
+
 html, body {
   height: 100%; /* Garantit que body prend toute la hauteur de l'écran */
   margin: 0;    /* Supprime la marge par défaut */
@@ -10,7 +12,7 @@ html, body {
 .home {
   width: 100%;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background-color: $secondary-color;
   padding: 0;
   margin: 0;
   }
