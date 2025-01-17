@@ -15,14 +15,3 @@ html, body {
   margin: 0;
   }
 
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-
-    // Gère les marges pour les petits écrans
-    @media (max-width: 768px) {
-      padding: 10px;
-    }
-  }

@@ -1,4 +1,41 @@
-header {
-  padding: 20px;
-  background-color: #f6f6f6;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff; /* Fond blanc */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre pour le style */
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff6060; /* Rouge du logo */
+
+      .logo__icon {
+        font-size: 2rem;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 30px;
+
+    .nav__link {
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: #000; /* Texte noir */
+      font-weight: bold;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ff6060; /* Devient rouge au survol */
+      }
+    }
+  }
 }

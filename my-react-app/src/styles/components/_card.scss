@@ -27,3 +27,19 @@
     transform: scale(1.05);
   }
 }
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+
+  // Gère les marges pour les petits écrans
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); // 2 colonnes sur écrans moyens
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // 1 colonne sur écrans petits
+  }
+}

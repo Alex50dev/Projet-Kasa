@@ -9,13 +9,8 @@ import Footer from './Footer';
 const AppRouter = () => {
   return (
     <Router>
-      {/* Navigation principale */}
-      <header>
-        <nav>
-          <a href="/">Accueil</a>
-          <a href="/about">À Propos</a>
-        </nav>
-      </header>
+      {/* Utilisation du composant Header */}
+      <Header />
 
       {/* Définition des routes */}
       <Routes>
@@ -24,7 +19,7 @@ const AppRouter = () => {
         {/* Route pour les pages non trouvées */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-      
+
       {/* Footer affiché sur toutes les pages */}
       <Footer />
     </Router>
