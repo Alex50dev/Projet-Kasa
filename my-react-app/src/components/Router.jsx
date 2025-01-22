@@ -5,6 +5,7 @@ import HousingDetail from '../pages/HousingDetail';
 import NotFound from '../pages/NotFound';
 import Header from './Header';
 import Footer from './Footer';
+import properties from "../data/logements.json";
 
 const AppRouter = () => {
   return (
@@ -16,7 +17,11 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* Route pour les pages non trouvées */}
+        <Route
+          path="/housing/:id"
+          element={<HousingDetail properties={properties} />}
+          />
+          {/* Route pour les pages non trouvées */}
         <Route path="*" element={<NotFound />} />
       </Routes>
 

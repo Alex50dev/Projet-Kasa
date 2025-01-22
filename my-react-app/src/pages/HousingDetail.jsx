@@ -1,7 +1,76 @@
-import React from 'react';
+import React from "react";
+import { useParams } from "react-router-dom"; // Pour accéder aux paramètres de l'URL
+import Slideshow from "../components/Slideshow";
+import Collapse from "../components/Collapse"; // Si vous avez un composant Collapse déjà fait
+import properties from "../data/logements.json";
 
 const HousingDetail = () => {
-  return <h2>Page de détail du logement</h2>;
+  const { id } = useParams(); // Récupérer l'ID de la propriété depuis l'URL
+  const property = properties.find((item) => item.id === id);
+
+  // Si l'ID ne correspond à aucune propriété, affiche une erreur
+  if (!property) {
+    return <h1>Propriété non trouvée</h1>;
+  }
+
+  return (
+    <div className="housing-detail">
+      {/* Carrousel d'images */}
+      <Slideshow images={property.pictures} />
+
+      {/* Informations principales */}
+      <div className="housing-detail-header">
+        <div>
+          <h1>{property.title}</h1>
+          <p>{property.location}</p>
+        </div>
+
+        {/* Tags */}
+        <div className="tags">
+          {property.tags.map((tag, index) => (
+            <span key={index} className="tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Informations du propriétaire */}
+      <div className="housing-detail-owner">
+        <div className="owner-info">
+          <p>{property.host.name}</p>
+          <img
+            src={property.host.picture}
+            alt={`Propriétaire ${property.host.name}`}
+            className="owner-picture"
+          />
+        </div>
+        {/* Étoiles de notation */}
+        <div className="rating">
+          {[...Array(5)].map((_, i) => (
+            <span
+              key={i}
+              className={`star ${i < property.rating ? "filled" : ""}`}
+            >
+              ★
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Sections collapsibles */}
+      <div className="housing-detail-collapses">
+        <Collapse title="Description">{property.description}</Collapse>
+        <Collapse title="Équipements">
+          <ul>
+            {property.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
+      </div>
+    </div>
+  );
 };
 
 export default HousingDetail;

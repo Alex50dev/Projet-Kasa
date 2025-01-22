@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 import Card from "../components/card";
 import properties from "../data/logements.json";
@@ -12,11 +13,14 @@ function Home() {
       </div>
       <div className="cards-container">
         {properties.map((property) => (
-          <Card
+          // Enveloppe la carte dans un lien dynamique
+          <Link
             key={property.id}
-            image={property.cover}
-            title={property.title}
-          />
+            to={`/housing/${property.id}`} // URL dynamique
+            className="card-link"
+          >
+            <Card image={property.cover} title={property.title} />
+          </Link>
         ))}
       </div>
     </div>
