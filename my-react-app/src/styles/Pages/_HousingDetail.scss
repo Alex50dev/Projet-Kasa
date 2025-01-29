@@ -1,125 +1,98 @@
 .housing-detail {
-    padding: 20px;
-  
-    .housing-detail-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-top: 20px;
-  
-      h1 {
-        font-size: 24px;
-        color: #333;
-      }
-  
-      p {
-        font-size: 16px;
-        color: #666;
-      }
-  
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-  
-        .tag {
-          background-color: #ff6060;
-          color: #fff;
-          padding: 5px 10px;
-          border-radius: 5px;
-          font-size: 12px;
-          margin: 5px;
-        }
-      }
-    }
-  
-    .housing-detail-owner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 20px;
-  
-      .owner-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-  
-        p {
-          font-size: 16px;
-          color: #333;
-        }
-  
-        .owner-picture {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          object-fit: cover;
-          margin-top: 10px;
-        }
-      }
-  
-      .rating {
-        display: flex;
-  
-        .star {
-          font-size: 20px;
-          color: #e3e3e3;
-  
-          &.filled {
-            color: #ff6060;
-          }
-        }
-      }
-    }
-  
-    .housing-detail-collapses {
-      margin-top: 30px;
-    }
-  }
-
-  .housing-detail-header h1,
-.housing-detail-header p {
-  color: #ffffff; /* Blanc pour un meilleur contraste */
+  padding: 20px;
+  background-color: #ffffff; /* Remettre le bon background */
 }
 
-.housing-detail {
-  color: #d9d9d9; /* Couleur générale du texte */
+.housing-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.housing-detail-header h1 {
+  font-size: 24px;
+  color: #ff6060; /* Même couleur que les collapses */
+}
+
+.housing-detail-header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #ff6060;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 5px;
 }
 
 .housing-detail-owner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .owner-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .owner-info p {
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .owner-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .rating {
-    display: flex;
-    gap: 5px;
-  }
-  
-  .rating .star {
-    font-size: 20px;
-    color: #e3e3e3; /* Gris pour les étoiles non remplies */
-  }
-  
-  .rating .star.filled {
-    color: #ff6060; /* Rouge pour les étoiles remplies */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Déplacer à droite */
+  margin-top: 20px;
+}
+
+.owner-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.owner-info p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.owner-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+}
+
+.rating .star {
+  font-size: 20px;
+  color: #e3e3e3;
+}
+
+.rating .star.filled {
+  color: #ff6060;
+}
+
+.housing-detail-collapses {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.housing-detail-collapses .collapse {
+  flex: 1;
+  min-width: 48%; /* Allonger les collapses */
+}
+
+.slideshow {
+  display: flex;
+  justify-content: center; /* Centrer correctement l'image du carrousel */
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}

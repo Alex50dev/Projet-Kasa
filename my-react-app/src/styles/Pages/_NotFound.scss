@@ -1,0 +1,35 @@
+.notfound-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .notfound-404 {
+    font-size: 150px;
+    font-weight: bold;
+    color: #ff6060;
+    margin: 0;
+  }
+  
+  .notfound-text {
+    font-size: 20px;
+    color: #ff6060;
+    margin-bottom: 20px;
+  }
+  
+  .notfound-link {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+    transition: 0.3s;
+  
+    &:hover {
+      color: #ff6060;
+      border-bottom: 1px solid #ff6060;
+    }
+  }
