@@ -1,63 +1,70 @@
 .about {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+
+  .about-banner {
+    width: 100%;
+    max-width: 1600px; /* Réduit la largeur max de la bannière */
+    height: 270px; /* Ajuste la hauteur si nécessaire */
+    margin: 0 auto 60px; /* Centre l’image */
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 1400px; // Augmenter la largeur
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0 20px;
-  
-    .about-banner {
-      width: 100%;
-      height: 300px;
-      margin-bottom: 40px;
+    gap: 20px;
+    padding: 0 40px;
+
+    .collapse {
+      width: 100%; // Les collapses prennent toute la largeur
+      background-color: #ff6060;
+      border-radius: 5px;
       overflow: hidden;
-      border-radius: 10px;
-  
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+
+      .collapse-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        cursor: pointer;
+        color: white;
+        font-size: 18px;
+
+        h2 {
+          margin: 0;
+        }
+
+        .arrow {
+          font-size: 20px;
+          transition: transform 0.3s;
+        }
+
+        .open {
+          transform: rotate(180deg);
+        }
       }
-    }
-  
-    .about-content {
-      width: 100%;
-      max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-  
-      .collapse {
-        background-color: #ff6060;
-        border-radius: 5px;
-        overflow: hidden;
-  
-        .collapse-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 10px 20px;
-          cursor: pointer;
-          color: white;
-          font-size: 18px;
-  
-          h2 {
-            margin: 0;
-          }
-  
-          .arrow {
-            font-size: 20px;
-            transition: transform 0.3s;
-          }
-  
-          .open {
-            transform: rotate(180deg);
-          }
-        }
-  
-        .collapse-content {
-          padding: 20px;
-          background-color: white;
-          color: #333;
-        }
+
+      .collapse-content {
+        padding: 20px;
+        background-color: white;
+        color: #333;
       }
     }
   }
+}

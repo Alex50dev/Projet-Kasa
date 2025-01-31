@@ -1,11 +1,19 @@
 @import "../components/variables";
 
+#root, .App {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 html, body {
-  height: 100%; /* Garantit que body prend toute la hauteur de l'écran */
-  margin: 0;    /* Supprime la marge par défaut */
-  padding: 0;   /* Supprime le padding par défaut */
-  display: block;  /* Supprime le display flex */
-  place-items: normal;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 // Styles pour la page Home
@@ -15,4 +23,9 @@ html, body {
   background-color: $secondary-color;
   padding: 0;
   margin: 0;
+  }
+
+  body {
+    width: 100vw; /* Force la largeur à 100% de l’écran */
+    overflow-x: hidden; /* Évite les décalages horizontaux */
   }

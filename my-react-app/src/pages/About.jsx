@@ -7,7 +7,7 @@ const About = () => {
     <div className="about">
       <div className="about-banner">
         {/* Ajoutez ici une image */}
-        <img src="/path-to-your-banner-image.jpg" alt="Bannière À propos" />
+        <img src="/public/image 2 projet Kasa.jpg" alt="Bannière À propos" />
       </div>
       <div className="about-content">
         <Collapse title="Fiabilité">
