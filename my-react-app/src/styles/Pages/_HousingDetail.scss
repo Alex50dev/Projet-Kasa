@@ -1,57 +1,67 @@
 .housing-detail {
-  padding: 20px;
+  min-height: calc(100vh - 100px); /* Ajuste pour éviter l’espace vide */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #ffffff; /* Remettre le bon background */
 }
 
 .housing-detail-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 20px;
+    justify-content: space-between; /* Sépare le titre à gauche et le propriétaire à droite */
+    align-items: center; /* Aligne les éléments sur une même ligne */
+    width: 100%;
+    margin-bottom: 20px; /* Ajoute un espace sous le header */
 }
 
 .housing-detail-header h1 {
   font-size: 24px;
   color: #ff6060; /* Même couleur que les collapses */
+  margin-bottom: 5px;
 }
 
 .housing-detail-header p {
   font-size: 16px;
-  color: #666;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 0px;
+  gap: 10px;
 }
 
 .tag {
   background-color: #ff6060;
   color: #fff;
   padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 12px;
-  margin: 5px;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
 .housing-detail-owner {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Déplacer à droite */
-  margin-top: 20px;
+    align-items: flex-end; /* Aligner les éléments sur une ligne */
+    justify-content: space-between; /* Répartit les éléments de chaque côté */
+    gap: 10px;
+    max-width: 200px; /* Ajuste la largeur max pour éviter que ça prenne trop de place*/
 }
 
 .owner-info {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 10px;
+  color: #ff6060; /* Même couleur que les collapses */
+  font-weight: bold;
+  font-size: 16px;
+
 }
 
 .owner-info p {
-  font-size: 14px;
-  font-weight: bold;
-  margin-right: 10px;
+  margin: 0;
 }
 
 .owner-info img {

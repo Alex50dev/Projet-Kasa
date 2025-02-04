@@ -18,43 +18,40 @@ const HousingDetail = () => {
       {/* Carrousel d'images */}
       <Slideshow images={property.pictures} />
 
-      {/* Informations principales */}
       <div className="housing-detail-header">
-        <div>
+        {/* Bloc gauche : titre, adresse et tags */}
+        <div className="housing-info">
           <h1>{property.title}</h1>
-          <p>{property.location}</p>
+          <p className="housing-location">{property.location}</p>
+          <div className="tags">
+            {property.tags.map((tag, index) => (
+              <span key={index} className="tag">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
 
-        {/* Tags */}
-        <div className="tags">
-          {property.tags.map((tag, index) => (
-            <span key={index} className="tag">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Informations du propriétaire */}
-      <div className="housing-detail-owner">
-        <div className="owner-info">
-          <p>{property.host.name}</p>
-          <img
-            src={property.host.picture}
-            alt={`Propriétaire ${property.host.name}`}
-            className="owner-picture"
-          />
-        </div>
-        {/* Étoiles de notation */}
-        <div className="rating">
-          {[...Array(5)].map((_, i) => (
-            <span
-              key={i}
-              className={`star ${i < property.rating ? "filled" : ""}`}
-            >
-              ★
-            </span>
-          ))}
+        {/* Bloc droit : utilisateur et étoiles */}
+        <div className="housing-owner">
+          <div className="owner-info">
+            <p>{property.host.name}</p>
+            <img
+              src={property.host.picture}
+              alt={`Propriétaire ${property.host.name}`}
+              className="owner-picture"
+            />
+          </div>
+          <div className="rating">
+            {[...Array(5)].map((_, i) => (
+              <span
+                key={i}
+                className={`star ${i < property.rating ? "filled" : ""}`}
+              >
+                ★
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
