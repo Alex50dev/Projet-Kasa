@@ -1,12 +1,19 @@
 import React from "react";
 import "../styles/components/_Banner.scss";
 
-function Banner({ image, text }) {
+const Banner = ({ image, text }) => {
+  const bannerStyle = {
+    backgroundImage: `url("${image}")`, // Ajout des guillemets pour éviter les erreurs d'espaces
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  };
+
   return (
-    <div className="banner" style={{ backgroundImage: `url(${image})` }}>
+    <div className="banner" style={bannerStyle}>
       <h1>{text}</h1>
     </div>
   );
-}
+};
 
 export default Banner;

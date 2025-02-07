@@ -1,3 +1,6 @@
+@import "../components/variables";
+
+
 .housing-detail {
   min-height: calc(100vh - 100px); /* Ajuste pour éviter l’espace vide */
   display: flex;

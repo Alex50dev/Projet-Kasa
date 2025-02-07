@@ -8,17 +8,12 @@ import "../styles/Pages/_index.scss";
 function Home() {
   return (
     <div className="home">
-      <div className="banner">
-        <h1>Chez vous, partout et ailleurs</h1>
-      </div>
+      {/* Utilisation du composant Banner avec l'image */}
+      <Banner image="/image 1 projet Kasa.jpg" text="Chez vous, partout et ailleurs" />
+
       <div className="cards-container">
         {properties.map((property) => (
-          // Enveloppe la carte dans un lien dynamique
-          <Link
-            key={property.id}
-            to={`/housing/${property.id}`} // URL dynamique
-            className="card-link"
-          >
+          <Link key={property.id} to={`/housing/${property.id}`} className="card-link">
             <Card image={property.cover} title={property.title} />
           </Link>
         ))}
