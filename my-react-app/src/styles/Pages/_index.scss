@@ -2,20 +2,17 @@
 
 #root, .App {
   width: 100%;
-  flex: 1;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 html, body {
-  flex: 1;
   height: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 // Styles pour la page Home
@@ -40,4 +37,14 @@ html, body {
   .footer {
     margin-top: auto; /* Force le footer à rester en bas */
     width: 100%;
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Fait en sorte que la page prenne toute la hauteur */
+  }
+
+  .main-content {
+    flex: 1; /* Permet au contenu de prendre toute la place disponible */
   }
