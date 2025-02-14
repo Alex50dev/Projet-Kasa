@@ -19,10 +19,10 @@ const HousingDetail = () => {
       <Slideshow images={property.pictures} />
 
       <div className="housing-detail-header">
-        {/* Bloc gauche : titre, adresse et tags */}
         <div className="housing-info">
           <h1>{property.title}</h1>
           <p className="housing-location">{property.location}</p>
+          {/* Déplacement des tags ici, sous l'adresse */}
           <div className="tags">
             {property.tags.map((tag, index) => (
               <span key={index} className="tag">
@@ -32,8 +32,8 @@ const HousingDetail = () => {
           </div>
         </div>
 
-        {/* Bloc droit : utilisateur et étoiles */}
-        <div className="housing-owner">
+        {/* Bloc des infos utilisateur (Séparé pour ne pas être affecté par le padding-left) */}
+        <div className="housing-detail-owner">
           <div className="owner-info">
             <p>{property.host.name}</p>
             <img
@@ -44,10 +44,7 @@ const HousingDetail = () => {
           </div>
           <div className="rating">
             {[...Array(5)].map((_, i) => (
-              <span
-                key={i}
-                className={`star ${i < property.rating ? "filled" : ""}`}
-              >
+              <span key={i} className={`star ${i < property.rating ? "filled" : ""}`}>
                 ★
               </span>
             ))}
@@ -57,8 +54,8 @@ const HousingDetail = () => {
 
       {/* Sections collapsibles */}
       <div className="housing-detail-collapses">
-        <Collapse title="Description">{property.description}</Collapse>
-        <Collapse title="Équipements">
+        <Collapse className="housing-collapse" title="Description">{property.description}</Collapse>
+        <Collapse className="housing-collapse" title="Équipements">
           <ul>
             {property.equipments.map((equipment, index) => (
               <li key={index}>{equipment}</li>

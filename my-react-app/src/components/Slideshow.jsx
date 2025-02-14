@@ -16,11 +16,27 @@ const Slideshow = ({ images }) => {
 
   return (
     <div className="slideshow">
-      <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
-      <button onClick={handlePrev}>❮</button>
-      <button onClick={handleNext}>❯</button>
+      <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="slideshow-image" />
+
+      {/* Flèche gauche */}
+      {images.length > 1 && (
+        <button className="slideshow-arrow left" onClick={handlePrev}>
+          <img src="/Fléche gauche carrousel.png" alt="Flèche gauche" />
+        </button>
+      )}
+
+      {/* Flèche droite */}
+      {images.length > 1 && (
+        <button className="slideshow-arrow right" onClick={handleNext}>
+          <img src="/Fléche droite carrousel.png" alt="Flèche droite" />
+        </button>
+      )}
+
+      {/* Numérotation */}
+      {images.length > 1 && <p className="slideshow-counter">{currentIndex + 1} / {images.length}</p>}
     </div>
   );
 };
+
 
 export default Slideshow;

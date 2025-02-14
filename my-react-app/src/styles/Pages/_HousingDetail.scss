@@ -12,19 +12,27 @@
 .housing-detail-header {
   display: flex;
     justify-content: space-between; /* Sépare le titre à gauche et le propriétaire à droite */
-    align-items: center; /* Aligne les éléments sur une même ligne */
+    align-items: flex-start; /* Aligne les éléments sur une même ligne */
     width: 100%;
     margin-bottom: 20px; /* Ajoute un espace sous le header */
 }
 
+/* Seule cette partie est déplacée vers la droite */
+.housing-info {
+  padding-left: 165px; /* Décale uniquement le texte et les tags */
+  margin-top: -80px; /* Remonte légèrement */
+}
+
 .housing-detail-header h1 {
-  font-size: 24px;
+  font-size: 36px;
+  font-weight: 500;
   color: #ff6060; /* Même couleur que les collapses */
   margin-bottom: 5px;
 }
 
 .housing-detail-header p {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   color: #333;
   margin-bottom: 10px;
 }
@@ -47,24 +55,28 @@
 .housing-detail-owner {
   display: flex;
   flex-direction: column;
-    align-items: flex-end; /* Aligner les éléments sur une ligne */
-    justify-content: space-between; /* Répartit les éléments de chaque côté */
-    gap: 10px;
-    max-width: 200px; /* Ajuste la largeur max pour éviter que ça prenne trop de place*/
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 200px;
+  padding-right: 160px; /* Ajuste uniquement la partie utilisateur */
+  margin-top: -70px; /* Remonte légèrement */
 }
 
 .owner-info {
+  color: #ff6060;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #ff6060; /* Même couleur que les collapses */
-  font-weight: bold;
-  font-size: 16px;
-
+  font-weight: 500;
+  font-size: 18px;
+  text-align: right; /* Assure que le texte est bien aligné à droite */
 }
+
 
 .owner-info p {
   margin: 0;
+  color: inherit;
 }
 
 .owner-info img {
@@ -76,11 +88,12 @@
 
 .rating {
   display: flex;
+  justify-content: flex-end; /* Alignement des étoiles à droite */
   gap: 5px;
 }
 
 .rating .star {
-  font-size: 20px;
+  font-size: 40px;
   color: #e3e3e3;
 }
 
@@ -90,17 +103,37 @@
 
 .housing-detail-collapses {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px; /* Ajuste l’espace entre chaque collapse */
   margin-top: 30px;
   width: 100%;
+  max-width: 900px; /* Ajuste la largeur spécifique pour cette page */
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Cible uniquement les collapses dans HousingDetail */
 .housing-detail-collapses .collapse {
-  flex: 1;
-  min-width: 48%; /* Allonger les collapses */
+  width: 50%;
 }
 
+/* Ajuste l’alignement du header du collapse */
+.housing-detail-collapses .collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.housing-detail-collapses .collapse-header h2 {
+  flex: 1; /* Permet au texte de prendre tout l’espace disponible */
+  margin-right: 40px; /* Ajoute plus d’espace entre le texte et la flèche */
+}
+
+.housing-detail-collapses .collapse-header .arrow {
+  margin-left: auto; /* Crée un espace entre le titre et la flèche */
+}
 .slideshow {
   display: flex;
   justify-content: center; /* Centrer correctement l'image du carrousel */
