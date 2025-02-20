@@ -85,3 +85,38 @@
 .slideshow-image:first-of-type {
   display: block;
 }
+
+
+@media (max-width: 1024px) {
+  .slideshow {
+    height: 350px; /* Réduction de la hauteur */
+  }
+
+  .slideshow-arrow {
+    font-size: 24px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .slideshow-counter {
+    font-size: 16px;
+  }
+}
+
+/* 📌 Responsive MOBILES */
+@media (max-width: 768px) {
+  .slideshow {
+    height: 250px; /* Encore plus petit sur mobile */
+    border-radius: 5px;
+  }
+
+  .slideshow-arrow {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .slideshow-counter {
+    font-size: 14px;
+  }
+}

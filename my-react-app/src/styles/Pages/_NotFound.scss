@@ -41,3 +41,30 @@
       border-bottom: 1px solid #ff6060;
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .notfound-404 {
+    width: 100%; /* Réduit la taille de l’image */
+    max-width: 300px; /* Empêche qu’elle soit trop petite */
+    height: auto;
+  }
+
+  .notfound-text {
+    font-size: 20px; /* Réduit la taille du texte */
+    margin-top: 20px; /* Ajuste l’espacement */
+    margin-bottom: 50px;
+  }
+
+  .notfound-link {
+    font-size: 14px; /* Réduit la taille du lien */
+    margin-top: 100px;
+    position: relative;
+    bottom: auto; /* Supprime la position absolue */
+    margin-bottom: 5px;
+  }
+
+  .notfound-container {
+    padding-bottom: 10px; /* 🔥 Réduit l’espace sous tout le contenu */
+    margin-bottom: -150px;
+  }
+}

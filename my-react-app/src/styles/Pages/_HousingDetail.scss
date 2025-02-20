@@ -1,46 +1,57 @@
 @import "../components/variables";
 
 
+/* 📌 Conteneur principal */
 .housing-detail {
-  min-height: calc(100vh - 100px); /* Ajuste pour éviter l’espace vide */
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffffff; /* Remettre le bon background */
+  background-color: #ffffff;
+  padding: 0 20px;
 }
 
+/* 📌 Carrousel */
+.slideshow {
+  width: 100%;
+  max-width: 1400px;
+  height: 450px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* 📌 Header du logement */
 .housing-detail-header {
   display: flex;
-    justify-content: space-between; /* Sépare le titre à gauche et le propriétaire à droite */
-    align-items: flex-start; /* Aligne les éléments sur une même ligne */
-    width: 100%;
-    margin-bottom: 20px; /* Ajoute un espace sous le header */
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 80px;
 }
 
-/* Seule cette partie est déplacée vers la droite */
+/* 📌 Infos logement */
 .housing-info {
-  padding-left: 165px; /* Décale uniquement le texte et les tags */
-  margin-top: -80px; /* Remonte légèrement */
+  padding-left: 165px;
+  margin-top: -80px;
 }
 
 .housing-detail-header h1 {
   font-size: 36px;
   font-weight: 500;
-  color: #ff6060; /* Même couleur que les collapses */
+  color: #ff6060;
   margin-bottom: 5px;
 }
 
 .housing-detail-header p {
   font-size: 18px;
   font-weight: 500;
-  color: #333;
+  color: #000000;
   margin-bottom: 10px;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 0px;
   gap: 10px;
 }
 
@@ -52,6 +63,7 @@
   font-size: 14px;
 }
 
+/* 📌 Owner & étoiles */
 .housing-detail-owner {
   display: flex;
   flex-direction: column;
@@ -59,24 +71,18 @@
   justify-content: space-between;
   gap: 10px;
   max-width: 200px;
-  padding-right: 160px; /* Ajuste uniquement la partie utilisateur */
-  margin-top: -70px; /* Remonte légèrement */
+  padding-right: 160px;
+  margin-top: -70px;
 }
 
 .owner-info {
-  color: #ff6060;
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #ff6060;
   font-weight: 500;
   font-size: 18px;
-  text-align: right; /* Assure que le texte est bien aligné à droite */
-}
-
-
-.owner-info p {
-  margin: 0;
-  color: inherit;
+  text-align: right;
 }
 
 .owner-info img {
@@ -88,7 +94,7 @@
 
 .rating {
   display: flex;
-  justify-content: flex-end; /* Alignement des étoiles à droite */
+  justify-content: flex-end;
   gap: 5px;
 }
 
@@ -101,44 +107,130 @@
   color: #ff6060;
 }
 
+/* 📌 Collapses */
 .housing-detail-collapses {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 20px; /* Ajuste l’espace entre chaque collapse */
+  gap: 20px;
   margin-top: 30px;
-  width: 100%;
-  max-width: 900px; /* Ajuste la largeur spécifique pour cette page */
-  margin-left: auto;
-  margin-right: auto;
+  width: 90%;
+  margin: auto;
+  padding: 0 20px 0 20px;
 }
 
-/* Cible uniquement les collapses dans HousingDetail */
 .housing-detail-collapses .collapse {
-  width: 50%;
+  width: 48%;
+  margin-top: 20px;
 }
 
-/* Ajuste l’alignement du header du collapse */
-.housing-detail-collapses .collapse-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
+/* ✅ Responsive TABLETTE */
+@media (max-width: 1024px) {
+  .slideshow {
+    height: 350px;
+  }
+
+  .housing-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .housing-info {
+    padding-left: 0;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .housing-detail-owner {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .rating {
+    justify-content: flex-start;
+  }
+
+  .housing-detail-collapses {
+    max-width: 100%;
+  }
 }
 
-.housing-detail-collapses .collapse-header h2 {
-  flex: 1; /* Permet au texte de prendre tout l’espace disponible */
-  margin-right: 40px; /* Ajoute plus d’espace entre le texte et la flèche */
+/* ✅ Responsive MOBILE */
+@media (max-width: 768px) {
+  .slideshow {
+    height: 250px;
+  }
+
+  /* ✅ Titre sous l’image */
+  .housing-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    margin-top: 15px;
+  }
+
+  .housing-info {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  /* ✅ Owner tout à droite et Étoiles tout à gauche */
+  .housing-detail-owner {
+    gap: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Étoiles à gauche, owner tout à droite */
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 15px;
+  }
+
+  /* ✅ Taille des étoiles réduite */
+  .rating {
+    order: 1;
+    justify-content: flex-start;
+    flex: 1;
+    display: flex;
+  }
+
+  .rating .star {
+    font-size: 20px; /* Réduit la taille des étoiles */
+  }
+
+  /* ✅ Owner bien aligné tout à droite */
+  .owner-info {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    margin-left: auto;
+    text-align: right;
+  }
+  
+
+  .owner-info img {
+    width: 40px; /* Réduit légèrement la taille */
+    height: 40px;
+  }
+
+  /* ✅ Collapses en colonne */
+  .housing-detail-collapses {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .housing-detail-collapses .collapse {
+    width: 100%;
+  }
 }
 
-.housing-detail-collapses .collapse-header .arrow {
-  margin-left: auto; /* Crée un espace entre le titre et la flèche */
-}
-.slideshow {
-  display: flex;
-  justify-content: center; /* Centrer correctement l'image du carrousel */
-  align-items: center;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}

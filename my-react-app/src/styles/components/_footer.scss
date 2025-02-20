@@ -43,3 +43,33 @@
     font-weight: 500;
   }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-logo-container {
+    gap: 6px; /* Réduit l’espacement */
+  }
+
+  p {
+    font-size: 18px; /* Réduit la taille du texte */
+  }
+}
+
+/* 🔴 Mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: 25px 0;
+  }
+
+  .footer-logo-container {
+    flex-direction: column; /* Met le logo en colonne si nécessaire */
+    gap: 5px;
+  }
+
+  p {
+    font-size: 16px; /* Texte plus lisible sur mobile */
+  }
+}

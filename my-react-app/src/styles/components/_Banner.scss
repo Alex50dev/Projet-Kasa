@@ -1,3 +1,5 @@
+@import "../components/variables";
+
 .banner {
   position: relative;
   width: 100%;
@@ -35,4 +37,34 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
   z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    height: 280px; /* Réduit légèrement la hauteur */
+    max-width: 95%; /* Permet d'éviter un débordement sur petit écran */
+  }
+  .banner h1 {
+    font-size: 2rem; /* Texte plus petit */
+  }
+}
+
+/* 📌 ✅ Adaptation pour mobile */
+@media (max-width: 768px) {
+  .banner {
+    height: 120px !important; /* Encore plus petit */
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 80%;
+    min-height: 120px;
+    justify-content: flex-start;
+    background-size: contain; /* Ajuste l'image pour éviter qu'elle ne soit coupée */
+  }
+  
+  .banner h1 {
+    font-size: 1.5rem; /* Texte encore plus petit */
+    text-align: left;
+    padding: 0 10px;
+    max-width: 230px;
+  }
 }

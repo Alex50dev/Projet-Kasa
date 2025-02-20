@@ -1,3 +1,5 @@
+@import "../components/variables";
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
@@ -50,3 +52,19 @@
   z-index: 2;
 }
 
+@media (max-width: $breakpoint-tablet) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cards-wrapper {
+    width: 85%;
+    margin-left: 15px; /* Décale légèrement à gauche */
+  }
+}

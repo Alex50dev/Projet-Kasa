@@ -32,3 +32,32 @@
       color: #333;
     }
   }
+
+  @media (max-width: 768px) {
+    .collapse-header {
+      font-size: 16px;
+      padding: 12px 16px;
+    }
+  
+    .collapse-content {
+      padding: 15px;
+      font-size: 15px;
+    }
+  }
+  
+  /* 🔴 Mobile */
+  @media (max-width: 480px) {
+    .collapse {
+      width: 100%; /* Assure qu’il prend tout l’espace sur mobile */
+    }
+  
+    .collapse-header {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  
+    .collapse-content {
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
