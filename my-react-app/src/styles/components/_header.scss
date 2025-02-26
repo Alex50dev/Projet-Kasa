@@ -54,6 +54,14 @@
   left: 70%;
 }
 
+.header__nav .nav__link {
+  position: relative;
+}
+
+.header__nav .nav__link:hover {
+  text-decoration: underline;
+}
+
 
 @media (max-width: 1024px) {
   .header {
@@ -77,19 +85,55 @@
 /* RESPONSIVE MOBILES */
 @media (max-width: 768px) {
   .header {
-    padding: 10px 20px;
+    padding: 8px 15px; /* Réduit l’espace intérieur */
   }
 
-  .logo {
-    margin-left: 5px; /* Réduit légèrement l’espace */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Augmente légèrement l’espace entre les icônes */
+    
+  }
+
+  .logo-container svg {
+    width: 38px !important; /* Taille plus grande pour les SVG */
+    height: auto !important;
+  }
+
+  .logo-container svg path {
+    stroke-width: 0 !important; /* Supprime les contours parasites */
+    shape-rendering: geometricPrecision;
+  }
+
+  .logo-house {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .logo-house svg {
+    width: 33px !important; /* Ajuste la maison */
+  }
+
+  .logo-rectangle {
+    position: absolute;
+    bottom: 7px; /* Ajuste pour bien placer sous la maison */
+    left: 80%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Ajuste parfaitement le centrage */
+  }
+
+  .logo-rectangle svg {
+    width: 5px !important; /* Ajuste la taille */
+    height: auto !important;
   }
 
   .header__nav {
-    margin-right: 5px;
-    gap: 15px;
+    gap: 10px; /* Réduit l’espace entre les liens */
   }
 
   .nav__link {
-    font-size: 0.75rem;
+    font-size: 1rem !important; /* Réduit la taille du texte */
   }
+  
 }

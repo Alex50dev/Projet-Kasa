@@ -41,6 +41,7 @@
   .about-banner {
     height: 220px; /* Réduit la hauteur de la bannière */
     max-width: 90%; /* Réduit la largeur pour éviter qu'elle touche les bords */
+    margin-top: 50px !important;
   }
 
   .about-content {
@@ -51,11 +52,12 @@
 }
 
 /* ✅ Responsive MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .about {
     padding-bottom: 30px; /* Ajuste l’espacement sous les collapses */
     min-height: auto;
   }
+
 
   .about-banner {
     height: 140px !important; /* Réduit la hauteur */
@@ -66,7 +68,7 @@
     height: 90%;
     max-width: 90% !important;
     padding: 0 15px; /* Encore moins de padding */
-    gap: 15px; /* Réduit l’espace entre les collapses */
+    gap: 40px !important; /* Réduit l’espace entre les collapses */
   }
 
   /* ✅ Ajustement des collapses */
