@@ -169,17 +169,25 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0 20px;
-    margin-top: 15px;
+    margin-top: -22px;
   }
 
   .housing-info {
     padding-left: 0;
     text-align: left;
+
+    h1 {
+      font-size: 18px; /* ✅ Ajuste uniquement le titre */
+    }
+
+    p {
+      font-size: 14px !important; /* ✅ Applique la taille de 18px seulement sur mobile */
+    }
   }
 
   /* ✅ Owner tout à droite et Étoiles tout à gauche */
   .housing-detail-owner {
-    gap: 150px;
+    gap: 170px;
     display: flex;
     flex-direction: row;
     justify-content: space-between; /* Étoiles à gauche, owner tout à droite */
@@ -222,11 +230,14 @@
   /* ✅ Collapses en colonne */
   .housing-detail-collapses {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     width: 100%;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -10px;
+    margin-bottom: 50px;
+
   }
 
   .housing-detail-collapses .collapse {

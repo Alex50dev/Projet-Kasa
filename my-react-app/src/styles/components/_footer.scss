@@ -55,7 +55,14 @@
 
   p {
     font-size: 18px; /* Réduit la taille du texte */
+    white-space: pre-line;
   }
+
+  .footer p::after {
+    white-space: pre-line;
+    display: block;
+  }
+
 }
 
 /* 🔴 Mobile */
@@ -65,11 +72,12 @@
   }
 
   .footer-logo-container {
-    flex-direction: column; /* Met le logo en colonne si nécessaire */
     gap: 5px;
   }
 
   p {
-    font-size: 16px; /* Texte plus lisible sur mobile */
+    font-size: 14px !important; /* Texte plus lisible sur mobile */
   }
+
 }
+

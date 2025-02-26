@@ -48,3 +48,42 @@ html, body {
   .main-content {
     flex: 1; /* Permet au contenu de prendre toute la place disponible */
   }
+
+
+  @media (max-width: 768px) {
+    .main-content {
+      min-height: unset !important; /* Supprime toute hauteur forcée */
+      height: auto !important; /* Fixe automatiquement la hauteur */
+      padding-bottom: 0 !important; /* Supprime les marges */
+      margin-bottom: 0 !important;
+    }
+  
+    .home {
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important;
+    }
+  
+    .footer {
+      margin-top: 0 !important; /* Empêche le footer de monter */
+    }
+
+    .app-container {
+      min-height: auto !important;
+      height: auto !important;
+    }
+
+    #root, .App {
+      min-height: 100vh; /* Force la page à remplir l’écran sans excès */
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden; /* Évite le débordement horizontal */
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  
+  }
+
+
+  

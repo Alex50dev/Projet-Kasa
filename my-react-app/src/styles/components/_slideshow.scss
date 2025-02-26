@@ -89,7 +89,8 @@
 
 @media (max-width: 1024px) {
   .slideshow {
-    height: 350px; /* Réduction de la hauteur */
+    height: 350px;
+    /* Réduction de la hauteur */
   }
 
   .slideshow-arrow {
@@ -106,17 +107,67 @@
 /* 📌 Responsive MOBILES */
 @media (max-width: 768px) {
   .slideshow {
-    height: 250px; /* Encore plus petit sur mobile */
+    height: 300px !important;
+    /* Encore plus petit sur mobile */
     border-radius: 5px;
+    width: 90% !important; /* Réduit la largeur */
+    max-width: 500px !important; /* Fixe une largeur max pour éviter trop grand */
+    margin: 0 auto; /* Centre le slideshow */
+    padding-right: 15px;
+    margin-top: 25px !important;
   }
 
   .slideshow-arrow {
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
+    font-size: 20px !important;
+    width: 30px !important;
+    height: 15px !important;
   }
 
-  .slideshow-counter {
-    font-size: 14px;
+  /* ✅ Réduit la taille des boutons */
+  .left,
+  .right {
+    width: 30px !important;
+    height: 30px !important;
   }
+
+  /* ✅ Réduit la taille des images des flèches */
+  .left img,
+  .right img {
+    width: 100% !important;
+    /* L'image prend toute la place du bouton */
+    height: auto !important;
+    max-width: 25px;
+    /* Taille réduite */
+  }
+
+  /* ✅ Réduit la taille des boutons flèches */
+  .slideshow-arrow {
+    width: 30px !important;
+    height: 30px !important;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* ✅ Réduit la taille des images de flèches */
+  .slideshow-arrow img {
+    width: 20px !important; /* Taille réduite */
+    height: auto !important;
+  }
+
+  .slideshow-arrow.left {
+    left: -5px !important; /* Moins d’espace avec le bord gauche */
+  }
+
+  .slideshow-arrow.right {
+    right: 5px !important; /* Moins d’espace avec le bord droit */
+  }
+}
+
+
+.slideshow-counter {
+  font-size: 14px;
+}
+
+.slideshow-counter {
+  display: none !important;
 }
