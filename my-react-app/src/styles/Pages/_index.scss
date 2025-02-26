@@ -50,7 +50,7 @@ html, body {
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     .main-content {
       min-height: unset !important; /* Supprime toute hauteur forcée */
       height: auto !important; /* Fixe automatiquement la hauteur */
