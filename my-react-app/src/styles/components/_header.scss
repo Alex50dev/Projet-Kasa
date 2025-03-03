@@ -69,11 +69,13 @@
   }
 
   .logo {
-    margin-left: 10px; /* Ajuste le décalage du logo */
+    margin-left: 10px;
+    /* Ajuste le décalage du logo */
   }
 
   .header__nav {
-    margin-right: 10px; /* Ajuste le menu vers la gauche */
+    margin-right: 10px;
+    /* Ajuste le menu vers la gauche */
     gap: 20px;
   }
 
@@ -85,22 +87,26 @@
 /* RESPONSIVE MOBILES */
 @media (max-width: 768px) {
   .header {
-    padding: 8px 15px; /* Réduit l’espace intérieur */
+    padding: 8px 15px;
+    /* Réduit l’espace intérieur */
   }
 
   .logo-container {
     display: flex;
     align-items: center;
-    gap: 8px; /* Augmente légèrement l’espace entre les icônes */
+    gap: 8px;
+    /* Augmente légèrement l’espace entre les icônes */
   }
 
   .logo-container svg {
-    width: 38px !important; /* Taille plus grande pour les SVG */
+    width: 38px !important;
+    /* Taille plus grande pour les SVG */
     height: auto !important;
   }
 
   .logo-container svg path {
-    stroke-width: 0 !important; /* Supprime les contours parasites */
+    stroke-width: 0 !important;
+    /* Supprime les contours parasites */
     shape-rendering: geometricPrecision;
   }
 
@@ -112,28 +118,35 @@
   }
 
   .logo-house svg {
-    width: 33px !important; /* Ajuste la maison */
+    width: 33px !important;
+    /* Ajuste la maison */
   }
 
   .logo-rectangle {
     position: absolute;
-    bottom: 7px; /* Ajuste pour bien placer sous la maison */
-    left: 80%; /* Centre horizontalement */
-    transform: translateX(-50%); /* Ajuste parfaitement le centrage */
+    bottom: 7px;
+    /* Ajuste pour bien placer sous la maison */
+    left: 80%;
+    /* Centre horizontalement */
+    transform: translateX(-50%);
+    /* Ajuste parfaitement le centrage */
   }
 
   .logo-rectangle svg {
-    width: 5px !important; /* Ajuste la taille */
+    width: 5px !important;
+    /* Ajuste la taille */
     height: auto !important;
   }
 
   .header__nav {
-    gap: 10px; /* Réduit l’espace entre les liens */
+    gap: 10px;
+    /* Réduit l’espace entre les liens */
   }
 
   .nav__link {
-    font-size: 1rem !important; /* Réduit la taille du texte */
-    font-variant: small-caps !important;
+    font-size: 1rem !important; /* Taille ajustée */
+    font-variant: small-caps !important; /* Optionnel, met en petites majuscules */
+    text-transform: uppercase !important; /* Met tout en majuscule */
   }
   
 }
