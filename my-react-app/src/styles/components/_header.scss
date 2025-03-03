@@ -144,9 +144,24 @@
   }
 
   .nav__link {
-    font-size: 1rem !important; /* Taille ajustée */
-    font-variant: small-caps !important; /* Optionnel, met en petites majuscules */
-    text-transform: uppercase !important; /* Met tout en majuscule */
+    font-size: 1rem !important;
+    /* Taille ajustée */
+    font-variant: small-caps !important;
+    /* Optionnel, met en petites majuscules */
+    text-transform: uppercase !important;
+    /* Met tout en majuscule */
   }
-  
+
+  .logo-container svg:nth-child(3) {
+    /* Sélectionne le A */
+    height: 40px !important;
+    /* Ajuste pour équilibrer avec le K */
+  }
+  /* Sélectionne le S */
+  .logo-container svg:nth-child(4) {
+    /* Sélectionne le A */
+    height: 40px !important;
+    /* Ajuste pour équilibrer avec le K */
+  }
+
 }
