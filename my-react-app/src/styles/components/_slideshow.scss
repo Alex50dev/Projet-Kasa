@@ -161,13 +161,12 @@
   .slideshow-arrow.right {
     right: 5px !important; /* Moins d’espace avec le bord droit */
   }
-}
 
-
-.slideshow-counter {
-  font-size: 14px;
-}
-
-.slideshow-counter {
-  display: none !important;
+  .slideshow-counter {
+    font-size: 14px;
+  }
+  
+  .slideshow-counter {
+    display: none !important;
+  }
 }

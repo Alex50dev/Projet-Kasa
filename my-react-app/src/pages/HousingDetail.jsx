@@ -16,13 +16,17 @@ const HousingDetail = () => {
   return (
     <div className="housing-detail">
       {/* Carrousel d'images */}
-      <Slideshow images={property.pictures} />
+      <Slideshow 
+        images={property.pictures} 
+        alt={`Images de ${property.title}`} 
+      />
 
       <div className="housing-detail-header">
         <div className="housing-info">
-          <h1>{property.title}</h1>
+          <h1 title={`Titre du logement : ${property.title}`}>{property.title}</h1>
           <p className="housing-location">{property.location}</p>
-          {/* Déplacement des tags ici, sous l'adresse */}
+          
+          {/* Tags sous l'adresse */}
           <div className="tags">
             {property.tags.map((tag, index) => (
               <span key={index} className="tag">
@@ -32,19 +36,26 @@ const HousingDetail = () => {
           </div>
         </div>
 
-        {/* Bloc des infos utilisateur (Séparé pour ne pas être affecté par le padding-left) */}
+        {/* Infos propriétaire */}
         <div className="housing-detail-owner">
           <div className="owner-info">
             <p>{property.host.name}</p>
             <img
               src={property.host.picture}
-              alt={`Propriétaire ${property.host.name}`}
+              alt={`Photo du propriétaire ${property.host.name}`}
               className="owner-picture"
+              title={`Propriétaire : ${property.host.name}`}
             />
           </div>
+
+          {/* Notation en étoiles */}
           <div className="rating">
             {[...Array(5)].map((_, i) => (
-              <span key={i} className={`star ${i < property.rating ? "filled" : ""}`}>
+              <span 
+                key={i} 
+                className={`star ${i < property.rating ? "filled" : ""}`}
+                title={`Note : ${property.rating}/5`}
+              >
                 ★
               </span>
             ))}
@@ -54,8 +65,19 @@ const HousingDetail = () => {
 
       {/* Sections collapsibles */}
       <div className="housing-detail-collapses">
-        <Collapse className="housing-collapse" title="Description">{property.description}</Collapse>
-        <Collapse className="housing-collapse" title="Équipements">
+        <Collapse 
+          className="housing-collapse" 
+          title="Description"
+          titleAttr="Afficher la description du logement"
+        >
+          {property.description}
+        </Collapse>
+
+        <Collapse 
+          className="housing-collapse" 
+          title="Équipements"
+          titleAttr="Afficher la liste des équipements"
+        >
           <ul>
             {property.equipments.map((equipment, index) => (
               <li key={index}>{equipment}</li>

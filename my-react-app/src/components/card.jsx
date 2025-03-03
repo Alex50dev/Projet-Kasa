@@ -3,9 +3,9 @@ import "../styles/components/_Card.scss";
 
 const Card = ({ image, title }) => {
   return (
-    <div className="card">
-      <img src={image} alt={title} />
-      <h2 className="card-title">{title}</h2> {/* Vérifie que le titre est bien là */}
+    <div className="card" aria-label={`Carte contenant ${title}`}>
+      <img src={image} alt={title} title={title} role="img" />
+      <h2 className="card-title">{title}</h2>
     </div>
   );
 };

@@ -10,19 +10,22 @@ import properties from "../data/logements.json";
 const AppRouter = () => {
   return (
     <Router>
-      <div className="app-container">
+      <div className="app-container" aria-label="Conteneur principal du site">
         <Header />
-        <div className="main-content">
+        
+        <div className="main-content" role="main">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<Home />} title="Page d'accueil" />
+            <Route path="/about" element={<About />} title="À propos de nous" />
             <Route
               path="/housing/:id"
               element={<HousingDetail properties={properties} />}
+              title="Détails du logement"
             />
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} title="Page introuvable" />
           </Routes>
         </div>
+
         <Footer />
       </div>
     </Router>

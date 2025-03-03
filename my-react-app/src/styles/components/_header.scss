@@ -92,7 +92,6 @@
     display: flex;
     align-items: center;
     gap: 8px; /* Augmente légèrement l’espace entre les icônes */
-    
   }
 
   .logo-container svg {
@@ -134,6 +133,7 @@
 
   .nav__link {
     font-size: 1rem !important; /* Réduit la taille du texte */
+    font-variant: small-caps !important;
   }
   
 }
