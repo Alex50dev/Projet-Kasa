@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  background-color: $background-color;
   padding-bottom: 50px;
 
   .about-banner {
@@ -52,7 +52,7 @@
 }
 
 /* ✅ Responsive MOBILE */
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-mobile) {
   .about {
     padding-bottom: 30px; /* Ajuste l’espacement sous les collapses */
     min-height: auto;
@@ -68,7 +68,7 @@
     height: 90%;
     max-width: 90% !important;
     padding: 0 15px; /* Encore moins de padding */
-    gap: 40px !important; /* Réduit l’espace entre les collapses */
+    gap: 50px !important; /* Réduit l’espace entre les collapses */
   }
 
   /* ✅ Ajustement des collapses */
@@ -78,5 +78,9 @@
 
   .collapse-content {
     font-size: 10px; /* Réduit la taille du texte */
+  }
+
+  .footer {
+    height: 183px;
   }
 }

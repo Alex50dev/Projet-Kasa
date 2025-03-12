@@ -7,7 +7,7 @@
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background: #fff;
+  background: $background-color;
   padding: 20px;
   position: relative;
 }
@@ -15,7 +15,7 @@
 .notfound-404 {
   font-size: 150px;
   font-weight: bold;
-  color: #ff6060;
+  color: $primary-color;
   margin-bottom: 30px; /* Espace sous le 404 */
   position: absolute;
   top: 15%; /* Monte le 404 plus haut */
@@ -23,7 +23,7 @@
 
 .notfound-text {
   font-size: 36px;
-  color: #ff6060;
+  color: $primary-color;
   margin-top: 200px; /* Abaisse le texte */
 }
 
@@ -37,8 +37,8 @@
   bottom: 10%; /* Descend le lien de retour */
 
   &:hover {
-      color: #ff6060;
-      border-bottom: 1px solid #ff6060;
+      color: $primary-color;
+      border-bottom: 1px solid $primary-color;
   }
 }
 

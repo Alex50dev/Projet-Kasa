@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import HousingDetail from "../pages/HousingDetail";
-import NotFound from "../pages/NotFound";
-import Header from "./Header";
-import Footer from "./Footer";
-import properties from "../data/logements.json";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import HousingDetail from "./pages/HousingDetail";
+import NotFound from "./pages/NotFound";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import properties from "./data/logements.json";
 
 const AppRouter = () => {
   return (

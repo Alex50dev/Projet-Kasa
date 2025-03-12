@@ -1,9 +1,11 @@
+@import "../components/variables";
+
 .footer {
   font-family: 'Montserrat', sans-serif !important;
   padding: 40px 0;
   position: relative;
-  background-color: #000;
-  color: #fff;
+  background-color: $secondary-color;
+  color: $background-color;
   text-align: center;
   width: 100%;
   margin-top: auto; /* Fait en sorte que le footer colle en bas */
@@ -44,7 +46,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-tablet) {
   .footer {
     padding: 30px 0;
   }
@@ -66,7 +68,7 @@
 }
 
 /* 🔴 Mobile */
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-mobile) {
   .footer p {
     font-size: 14px !important; /* Réduction de la taille du texte */
     text-align: center;

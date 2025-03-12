@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: $background-color;
   padding: 0 20px;
 }
 
@@ -38,14 +38,14 @@
 .housing-detail-header h1 {
   font-size: 36px;
   font-weight: 500;
-  color: #ff6060;
+  color: $primary-color;
   margin-bottom: 5px;
 }
 
 .housing-detail-header p {
   font-size: 18px;
   font-weight: 500;
-  color: #000000;
+  color: $secondary-color;
   margin-bottom: 10px;
 }
 
@@ -56,8 +56,8 @@
 }
 
 .tag {
-  background-color: #ff6060;
-  color: #fff;
+  background-color: $primary-color;
+  color: $background-color;
   padding: 5px 10px;
   border-radius: 10px;
   font-size: 14px;
@@ -85,7 +85,7 @@
 }
 
 .owner-info p {
-  color: #ff6060 !important; /* Assure que la couleur soit identique aux collapses */
+  color: $primary-color !important; /* Assure que la couleur soit identique aux collapses */
   font-weight: 500;
   font-size: 18px;
   white-space: normal; /* Permet un retour à la ligne */
@@ -108,11 +108,11 @@
 
 .rating .star {
   font-size: 40px;
-  color: #e3e3e3;
+  color: $background-color;
 }
 
 .rating .star.filled {
-  color: #ff6060;
+  color: $primary-color;
 }
 
 /* 📌 Collapses */
@@ -167,7 +167,7 @@
 }
 
 /* ✅ Responsive MOBILE */
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-mobile) {
   .slideshow {
     height: 250px;
   }

@@ -1,3 +1,5 @@
+@import "../components/variables";
+
 .slideshow {
   position: relative;
   width: 100%;
@@ -32,7 +34,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 30px;
-    color: #fff;
+    color: $background-color;
     background-color: transparent !important;
     border: none !important;
     outline: none !important;
@@ -66,7 +68,7 @@
     left: 50%;
     transform: translateX(-50%);
     /* Centre horizontalement */
-    color: #fff;
+    color: $background-color;
     /* Texte blanc */
     font-size: 18px;
     font-weight: bold;
@@ -87,7 +89,7 @@
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: $breakpoint-tablet) {
   .slideshow {
     height: 350px;
     /* Réduction de la hauteur */
@@ -105,7 +107,7 @@
 }
 
 /* 📌 Responsive MOBILES */
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-mobile) {
   .slideshow {
     height: 300px !important;
     /* Encore plus petit sur mobile */

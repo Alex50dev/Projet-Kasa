@@ -32,14 +32,14 @@
 /* Ajuste le texte pour qu’il passe au-dessus de l'overlay */
 .banner h1 {
   position: relative;
-  color: white;
+  color: $background-color;
   font-size: 2.2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
   z-index: 1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $breakpoint-tablet) {
   .banner {
     height: 280px; /* Réduit légèrement la hauteur */
     max-width: 95%; /* Permet d'éviter un débordement sur petit écran */
@@ -50,7 +50,7 @@
 }
 
 /* 📌 ✅ Adaptation pour mobile */
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-mobile) {
   .banner {
     height: 120px !important; /* Encore plus petit */
     margin-bottom: 20px;

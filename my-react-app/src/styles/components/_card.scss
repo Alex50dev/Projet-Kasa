@@ -45,7 +45,7 @@
   position: absolute;
   bottom: 10px; /* Place le titre proche du bas */
   left: 10px; /* Aligne le titre à gauche */
-  color: white; /* Texte blanc */
+  color: $background-color; /* Texte blanc */
   font-size: 14px; /* Taille plus petite */
   font-weight: normal; /* Police normale pour ne pas être trop épais */
   text-align: left;
