@@ -85,12 +85,12 @@
 }
 
 .owner-info p {
-  color: $primary-color !important; /* Assure que la couleur soit identique aux collapses */
+  color: $primary-color !important; 
   font-weight: 500;
   font-size: 18px;
-  white-space: normal; /* Permet un retour à la ligne */
-  word-wrap: break-word; /* Force la coupure si nécessaire */
-  max-width: 100px; /* ✅ Ajuste la largeur pour forcer un retour à la ligne */
+  white-space: normal; 
+  word-wrap: break-word; 
+  max-width: 100px; 
 }
 
 .owner-info img {
@@ -185,11 +185,11 @@
     text-align: left;
 
     h1 {
-      font-size: 18px; /* ✅ Ajuste uniquement le titre */
+      font-size: 18px;
     }
 
     p {
-      font-size: 14px !important; /* ✅ Applique la taille de 18px seulement sur mobile */
+      font-size: 14px !important;
     }
   }
 
@@ -198,7 +198,7 @@
     gap: 170px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Étoiles à gauche, owner tout à droite */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0 20px;
@@ -215,7 +215,7 @@
   }
 
   .rating .star {
-    font-size: 20px; /* Réduit la taille des étoiles */
+    font-size: 20px; 
   }
 
   /* ✅ Owner bien aligné tout à droite */
@@ -232,7 +232,7 @@
   
 
   .owner-info img {
-    width: 40px; /* Réduit légèrement la taille */
+    width: 40px;
     height: 40px;
   }
 

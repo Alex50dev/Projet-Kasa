@@ -14,7 +14,6 @@ function Home() {
         alt="Paysage montrant un environnement accueillant"
       />
       
-      {/* Conteneur avec fond gris */}
       <div className="cards-wrapper">
         <div className="cards-container">
           {properties.map((property) => (

@@ -1,12 +1,11 @@
 import React from "react";
 import Collapse from "../components/Collapse";
-import "../styles/Pages/_About.scss"; // Importez le style spécifique à la page
+import "../styles/Pages/_About.scss";
 
 const About = () => {
   return (
     <div className="about">
       <div className="about-banner">
-        {/* Ajoutez ici une image */}
         <img src="/public/image 2 projet Kasa.jpg" alt="Bannière À propos" />
       </div>
       <div className="about-content">

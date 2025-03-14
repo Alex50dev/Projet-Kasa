@@ -16,15 +16,15 @@
   font-size: 150px;
   font-weight: bold;
   color: $primary-color;
-  margin-bottom: 30px; /* Espace sous le 404 */
+  margin-bottom: 30px; 
   position: absolute;
-  top: 15%; /* Monte le 404 plus haut */
+  top: 15%; 
 }
 
 .notfound-text {
   font-size: 36px;
   color: $primary-color;
-  margin-top: 200px; /* Abaisse le texte */
+  margin-top: 200px; 
 }
 
 .notfound-link {
@@ -34,7 +34,7 @@
   border-bottom: 1px solid black;
   transition: 0.3s;
   position: absolute;
-  bottom: 10%; /* Descend le lien de retour */
+  bottom: 10%; 
 
   &:hover {
       color: $primary-color;
@@ -44,27 +44,27 @@
 
 @media (max-width: $breakpoint-mobile) {
   .notfound-404 {
-    width: 100%; /* Réduit la taille de l’image */
-    max-width: 300px; /* Empêche qu’elle soit trop petite */
+    width: 100%; 
+    max-width: 300px; 
     height: auto;
   }
 
   .notfound-text {
-    font-size: 20px; /* Réduit la taille du texte */
-    margin-top: 20px; /* Ajuste l’espacement */
+    font-size: 20px; 
+    margin-top: 20px; 
     margin-bottom: 50px;
   }
 
   .notfound-link {
-    font-size: 14px; /* Réduit la taille du lien */
+    font-size: 14px; 
     margin-top: 100px;
     position: relative;
-    bottom: auto; /* Supprime la position absolue */
+    bottom: auto; 
     margin-bottom: 5px;
   }
 
   .notfound-container {
-    padding-bottom: 10px; /* 🔥 Réduit l’espace sous tout le contenu */
+    padding-bottom: 10px; 
     margin-bottom: -150px;
   }
 }

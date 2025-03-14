@@ -8,7 +8,7 @@
   color: $background-color;
   text-align: center;
   width: 100%;
-  margin-top: auto; /* Fait en sorte que le footer colle en bas */
+  margin-top: auto; 
 
   .footer-content {
     max-width: 1200px;
@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espacement entre chaque lettre */
+    gap: 10px; 
   }
 
   .logo-house {
@@ -35,7 +35,7 @@
 
   .logo-rectangle {
     position: absolute;
-    bottom: -1px; /* Ajuster pour bien placer sous la maison */
+    bottom: -1px; 
     left: 65%;
   }
 
@@ -52,11 +52,11 @@
   }
 
   .footer-logo-container {
-    gap: 6px; /* Réduit l’espacement */
+    gap: 6px; 
   }
 
   p {
-    font-size: 18px; /* Réduit la taille du texte */
+    font-size: 18px; 
     white-space: pre-line;
   }
 
@@ -70,28 +70,28 @@
 /* 🔴 Mobile */
 @media (max-width: $breakpoint-mobile) {
   .footer p {
-    font-size: 14px !important; /* Réduction de la taille du texte */
+    font-size: 14px !important; 
     text-align: center;
     max-width: 80%;
     margin: 0 auto;
-    line-height: 1.4; /* Ajuste l'espacement */
+    line-height: 1.4; 
     display: block;
-    white-space: normal; /* Permet au texte de s'adapter */
+    white-space: normal; 
   }
 
-  /* ✅ Ajoute un retour à la ligne spécifique après "All" */
+  
   .footer p::before {
     content: "© 2020 Kasa. All \A rights reserved";
     white-space: pre-wrap;
     display: block;
   }
 
-  /* ❌ Supprime le texte original pour éviter la duplication */
+  
   .footer p {
     visibility: hidden;
   }
 
-  /* ✅ Remplace le texte original par la version corrigée */
+  
   .footer p::before {
     visibility: visible;
   }

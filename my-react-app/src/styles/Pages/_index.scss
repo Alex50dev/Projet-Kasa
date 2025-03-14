@@ -25,36 +25,36 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Évite que le footer remonte */
+  justify-content: flex-start;
   padding-bottom: 50px;
   }
 
   body {
-    width: 100vw; /* Force la largeur à 100% de l’écran */
-    overflow-x: hidden; /* Évite les décalages horizontaux */
+    width: 100vw;
+    overflow-x: hidden;
   }
 
   .footer {
-    margin-top: auto; /* Force le footer à rester en bas */
+    margin-top: auto;
     width: 100%;
   }
 
   .app-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Fait en sorte que la page prenne toute la hauteur */
+    min-height: 100vh;
   }
 
   .main-content {
-    flex: 1; /* Permet au contenu de prendre toute la place disponible */
+    flex: 1;
   }
 
 
   @media (max-width: $breakpoint-mobile) {
     .main-content {
-      min-height: unset !important; /* Supprime toute hauteur forcée */
-      height: auto !important; /* Fixe automatiquement la hauteur */
-      padding-bottom: 0 !important; /* Supprime les marges */
+      min-height: unset !important; 
+      height: auto !important; 
+      padding-bottom: 0 !important;
       margin-bottom: 0 !important;
     }
   
@@ -64,7 +64,7 @@ html, body {
     }
   
     .footer {
-      margin-top: 0 !important; /* Empêche le footer de monter */
+      margin-top: 0 !important; 
     }
 
     .app-container {
@@ -73,12 +73,12 @@ html, body {
     }
 
     #root, .App {
-      min-height: 100vh; /* Force la page à remplir l’écran sans excès */
+      min-height: 100vh; 
       height: auto;
     }
 
     body {
-      overflow-x: hidden; /* Évite le débordement horizontal */
+      overflow-x: hidden; 
       margin-bottom: 0 !important;
       padding-bottom: 0 !important;
     }

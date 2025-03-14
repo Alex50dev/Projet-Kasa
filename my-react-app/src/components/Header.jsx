@@ -7,7 +7,6 @@ const Header = () => {
     <header className="header" aria-label="En-tête du site">
       <Link to="/" className="logo" aria-label="Retour à l'accueil">
         <div className="logo-container">
-          {/* Logo principal */}
           <svg width="55" height="63" viewBox="0 0 55 63" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <title>Logo Kasa</title>
             <path d="M20.5745 34.6485L9.34014 46.1362V62.2561H0.5V0H9.34014V34.8338L42.859 0H52.9883L26.6521 27.9782L54.83 62.2561H44.5165L20.5745 34.6485Z" fill="#FF6060" />
@@ -26,8 +25,6 @@ const Header = () => {
               </svg>
             </div>
           </div>
-
-          {/* Lettres du logo */}
           <svg width="40" height="49" viewBox="0 0 40 49" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <title>Lettre K</title>
             <path d="M0.289307 43.2534L3.78853 36.5831C7.84026 39.3624 14.102 41.4005 20.1796 41.4005C28.0989 41.4005 31.2298 38.9918 31.2298 34.9155C31.2298 24.3542 1.57849 33.4332 1.57849 14.7193C1.57849 6.19616 9.12945 0.637573 21.1005 0.637573C27.1781 0.637573 34.1765 2.30515 38.2282 4.89915L34.5448 11.5695C30.3089 8.79016 25.7047 7.86373 21.1005 7.86373C13.7337 7.86373 10.0503 10.643 10.0503 14.3487C10.0503 25.4659 39.7016 16.3869 39.7016 34.7302C39.7016 43.2534 31.9665 48.6267 19.4429 48.6267C11.892 48.812 4.15687 46.4032 0.289307 43.2534Z" fill="#FF6060" />

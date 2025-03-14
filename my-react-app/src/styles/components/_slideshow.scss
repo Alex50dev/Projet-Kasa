@@ -3,13 +3,9 @@
 .slideshow {
   position: relative;
   width: 100%;
-  /* Augmente la largeur */
   max-width: 1600px;
-  /* Évite que ça devienne trop grand */
   height: 450px !important;
-  /* Augmente légèrement la hauteur */
   margin: 0 auto;
-  /* Centre le carrousel */
   border-radius: 10px;
   overflow: hidden;
 
@@ -67,16 +63,12 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    /* Centre horizontalement */
     color: $background-color;
-    /* Texte blanc */
     font-size: 18px;
     font-weight: bold;
     font-weight: 500;
     background: none;
-    /* Supprime le fond */
     padding: 0;
-    /* Enlève le padding */
   }
 }
 
@@ -92,7 +84,6 @@
 @media (max-width: $breakpoint-tablet) {
   .slideshow {
     height: 350px;
-    /* Réduction de la hauteur */
   }
 
   .slideshow-arrow {
@@ -110,11 +101,10 @@
 @media (max-width: $breakpoint-mobile) {
   .slideshow {
     height: 300px !important;
-    /* Encore plus petit sur mobile */
     border-radius: 5px;
-    width: 90% !important; /* Réduit la largeur */
-    max-width: 500px !important; /* Fixe une largeur max pour éviter trop grand */
-    margin: 0 auto; /* Centre le slideshow */
+    width: 90% !important; 
+    max-width: 500px !important; 
+    margin: 0 auto;
     padding-right: 15px;
     margin-top: 25px !important;
   }
@@ -136,10 +126,8 @@
   .left img,
   .right img {
     width: 100% !important;
-    /* L'image prend toute la place du bouton */
     height: auto !important;
     max-width: 25px;
-    /* Taille réduite */
   }
 
   /* ✅ Réduit la taille des boutons flèches */
@@ -152,16 +140,16 @@
 
   /* ✅ Réduit la taille des images de flèches */
   .slideshow-arrow img {
-    width: 20px !important; /* Taille réduite */
+    width: 20px !important; 
     height: auto !important;
   }
 
   .slideshow-arrow.left {
-    left: -5px !important; /* Moins d’espace avec le bord gauche */
+    left: -5px !important; 
   }
 
   .slideshow-arrow.right {
-    right: 5px !important; /* Moins d’espace avec le bord droit */
+    right: 5px !important; 
   }
 
   .slideshow-counter {

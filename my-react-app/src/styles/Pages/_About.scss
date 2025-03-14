@@ -13,9 +13,9 @@
 
   .about-banner {
     width: 100%;
-    max-width: 1600px; /* Réduit la largeur max de la bannière */
-    height: 270px; /* Ajuste la hauteur si nécessaire */
-    margin: 0 auto 60px; /* Centre l’image */
+    max-width: 1600px;
+    height: 270px;
+    margin: 0 auto 60px;
     overflow: hidden;
     border-radius: 10px;
 
@@ -28,7 +28,7 @@
 
   .about-content {
     width: 100%;
-    max-width: 1400px; // Augmenter la largeur
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -39,45 +39,45 @@
 /* ✅ Responsive TABLETTE */
 @media (max-width: 1024px) {
   .about-banner {
-    height: 220px; /* Réduit la hauteur de la bannière */
-    max-width: 90%; /* Réduit la largeur pour éviter qu'elle touche les bords */
+    height: 220px;
+    max-width: 90%;
     margin-top: 50px !important;
   }
 
   .about-content {
     height: 90%;
-    max-width: 95%; /* Élargit légèrement pour remplir l'écran */
-    padding: 0 20px; /* Réduit le padding latéral */
+    max-width: 95%;
+    padding: 0 20px;
   }
 }
 
 /* ✅ Responsive MOBILE */
 @media (max-width: $breakpoint-mobile) {
   .about {
-    padding-bottom: 30px; /* Ajuste l’espacement sous les collapses */
+    padding-bottom: 30px;
     min-height: auto;
   }
 
 
   .about-banner {
-    height: 140px !important; /* Réduit la hauteur */
-    max-width: 90% !important; /* Ajuste la largeur */
+    height: 140px !important;
+    max-width: 90% !important;
   }
 
   .about-content {
     height: 90%;
     max-width: 90% !important;
-    padding: 0 15px; /* Encore moins de padding */
-    gap: 50px !important; /* Réduit l’espace entre les collapses */
+    padding: 0 15px;
+    gap: 50px !important; 
   }
 
   /* ✅ Ajustement des collapses */
   .collapse-header h2 {
-    font-size: 16px; /* Réduit la taille des titres */
+    font-size: 16px;
   }
 
   .collapse-content {
-    font-size: 10px; /* Réduit la taille du texte */
+    font-size: 10px;
   }
 
   .footer {

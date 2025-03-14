@@ -7,9 +7,8 @@
   align-items: center;
   padding: 20px 60px;
   background-color: #fff;
-  /* Fond blanc */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  /* Légère ombre pour le style */
+  
 
   .logo {
     display: flex;
@@ -36,7 +35,6 @@
 .logo-container {
   display: flex;
   gap: 8px;
-  /* Ajuste l’espacement entre les lettres */
   align-items: center;
 }
 
@@ -44,7 +42,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  /* Centrer horizontalement */
   align-items: center;
   top: 7px;
 }
@@ -52,7 +49,6 @@
 .logo-rectangle {
   position: absolute;
   bottom: 10px;
-  /* Ajuste pour bien placer sous le toit */
   left: 70%;
 }
 
@@ -72,12 +68,10 @@
 
   .logo {
     margin-left: 10px;
-    /* Ajuste le décalage du logo */
   }
 
   .header__nav {
     margin-right: 10px;
-    /* Ajuste le menu vers la gauche */
     gap: 20px;
   }
 
@@ -90,25 +84,21 @@
 @media (max-width: $breakpoint-mobile) {
   .header {
     padding: 8px 15px;
-    /* Réduit l’espace intérieur */
   }
 
   .logo-container {
     display: flex;
     align-items: center;
     gap: 8px;
-    /* Augmente légèrement l’espace entre les icônes */
   }
 
   .logo-container svg {
     width: 38px !important;
-    /* Taille plus grande pour les SVG */
     height: auto !important;
   }
 
   .logo-container svg path {
     stroke-width: 0 !important;
-    /* Supprime les contours parasites */
     shape-rendering: geometricPrecision;
   }
 
@@ -121,49 +111,36 @@
 
   .logo-house svg {
     width: 33px !important;
-    /* Ajuste la maison */
   }
 
   .logo-rectangle {
     position: absolute;
     bottom: 7px;
-    /* Ajuste pour bien placer sous la maison */
     left: 80%;
-    /* Centre horizontalement */
     transform: translateX(-50%);
-    /* Ajuste parfaitement le centrage */
   }
 
   .logo-rectangle svg {
     width: 5px !important;
-    /* Ajuste la taille */
     height: auto !important;
   }
 
   .header__nav {
     gap: 10px;
-    /* Réduit l’espace entre les liens */
   }
 
   .nav__link {
     font-size: 1rem !important;
-    /* Taille ajustée */
     font-variant: small-caps !important;
-    /* Optionnel, met en petites majuscules */
     text-transform: uppercase !important;
-    /* Met tout en majuscule */
   }
 
   .logo-container svg:nth-child(3) {
-    /* Sélectionne le A */
     height: 40px !important;
-    /* Ajuste pour équilibrer avec le K */
   }
-  /* Sélectionne le S */
+
   .logo-container svg:nth-child(4) {
-    /* Sélectionne le A */
     height: 40px !important;
-    /* Ajuste pour équilibrer avec le K */
   }
 
 }
