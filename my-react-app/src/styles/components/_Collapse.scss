@@ -30,8 +30,14 @@
   
     .collapse-content {
       padding: 20px;
-      background-color: $background-color;
+      background-color: #f6f6f6;
       color: #333;
+    }
+
+    .collapse-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
   }
 

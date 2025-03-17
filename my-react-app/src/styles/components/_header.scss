@@ -83,13 +83,17 @@
 /* RESPONSIVE MOBILES */
 @media (max-width: $breakpoint-mobile) {
   .header {
-    padding: 8px 15px;
+    padding: 8px 0;
+  }
+
+  .logo {
+    margin-left: 20px !important;
   }
 
   .logo-container {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 2px;
   }
 
   .logo-container svg {
@@ -126,21 +130,22 @@
   }
 
   .header__nav {
-    gap: 10px;
+    gap: 28px !important;
+    margin-right: 20px !important;
   }
 
   .nav__link {
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
     font-variant: small-caps !important;
     text-transform: uppercase !important;
   }
 
   .logo-container svg:nth-child(3) {
-    height: 40px !important;
+    height: 35px !important;
   }
 
   .logo-container svg:nth-child(4) {
-    height: 40px !important;
+    height: 35px !important;
   }
 
 }
